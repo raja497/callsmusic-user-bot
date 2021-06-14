@@ -38,6 +38,7 @@ async function joinCall(chatId, params) {
                             ssrc: params.source,
                         }),
                     }),
+                    joinAs: 'me'
                 })
             )
         ).updates[0].call.params.data
