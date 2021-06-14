@@ -10,7 +10,7 @@ async function joinCall(chatId, params) {
         const fullChat = (
             await client.invoke(
                 new Api.channels.GetFullChannel({
-                    channel: await client.getEntity(chatId),
+                    channel: chatId,
                 })
             )
         ).fullChat;
