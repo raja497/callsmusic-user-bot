@@ -4,6 +4,8 @@ const { client } = require(".");
 const calls = {};
 
 async function joinCall(chatId, params) {
+    console.log(chatId);
+    console.log(await client.getEntity(chatId));
     if (!(chatId in calls)) {
         const fullChat = (
             await client.invoke(
